@@ -1,0 +1,6 @@
+---
+# Example
+docker_secrets:
+  API_KEY:
+    data: uLgdSLDq98eQxMTj
+    state:  present

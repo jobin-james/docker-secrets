@@ -1,0 +1,19 @@
+---
+- name: Determine required python-docker module version.
+  set_fact:
+    deb_docker_python_package: "{% if 'python3' in ansible_python_interpreter|default('') %}python3-docker{% else %}python-docker{% endif %}"
+
+- name: Install required python-docker module
+  apt:
+    name: "{{ deb_docker_python_package }}"
+    state: present
+
+- name: Create the Docker secret file if not present
+  no_log: true
+  docker_secret:
+    name: "{{ item.key }}"
+    data: "{{ item.value.data }}"
+    state: "{{ item.value.state }}"
+    labels:
+      name: "Created by ansible"
+  with_dict: "{{ docker_secrets }}"
