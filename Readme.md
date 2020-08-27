@@ -1,5 +1,9 @@
 ### Ansible role for managing docker secrets.
 
+## Note: Recommended to keep the secrets in a vault file
+
+
+
 Usage
 
 Run the role in a inventory:
