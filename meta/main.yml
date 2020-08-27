@@ -37,7 +37,6 @@ galaxy_info:
    - name: Ubuntu
      versions:
      - all
-  platforms:
    - name: Debian
      versions:
      - all
@@ -48,7 +47,9 @@ galaxy_info:
   #   - 7
   #   - 99.99
 
-  galaxy_tags: ansible, docker-secrets
+  galaxy_tags: 
+    - development
+    - docker-secrets
 
 dependencies: []
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,
