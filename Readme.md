@@ -32,5 +32,5 @@ Create a playbook called `docker-secrets.yml`
   gather_facts: false
   become: true
   role:
-    - docker-secrets
+    - jobin_james.docker_secrets
 ```
